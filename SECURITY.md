@@ -8,4 +8,4 @@
 
 ## Reporting a Vulnerability
 
-Please [raise an issue](https://github.com/indie-pipeline/[PLUGIN]/issues) in case you find a security issue.
+Please [raise an issue](https://github.com/indie-pipeline/character-generator-importer-tool/issues) in case you find a security issue.

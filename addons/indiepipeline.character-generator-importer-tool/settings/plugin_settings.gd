@@ -1,8 +1,8 @@
 @tool
 class_name MyPluginSettings extends RefCounted
 
-const PluginPrefixName: String = "my_plugin"
-const GitRepositoryName: String = "my-plugin"
+const PluginPrefixName: String = "indiepipeline.character-generator-importer-tool"
+const GitRepositoryName: String = "character-generator-importer-tool"
 
 static var PluginName: String = "MyPlugin"
 static var PluginProjectName: String = ProjectSettings.get_setting("application/config/name")
@@ -19,7 +19,7 @@ static var PluginDebugDirectoryPath = "res://debug"
 static var UpdateNotificationSetting: String = PluginSettingsBasePath + "/update_notification_enabled"
 #endregion
 
-static var DebugMode: bool = true
+static var DebugMode: bool = false
 
 static func set_update_notification(enable: bool = true) -> void:
 	ProjectSettings.set_setting(UpdateNotificationSetting, enable)

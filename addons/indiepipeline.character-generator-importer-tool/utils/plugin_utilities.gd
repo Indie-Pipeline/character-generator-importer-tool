@@ -121,3 +121,47 @@ static func remove_files_recursive(path: String, regex: RegEx = null) -> void:
 		directory.remove(path)
 	else:
 		push_error("PluginUtilities->remove_recursive: An error %s happened open directory: %s " % [DirAccess.get_open_error(), path])
+
+
+
+static func find_nodes_of_type(node: Node, type_to_find: Node) -> Array:
+	var  result := []
+	
+	var childrens = node.get_children(true)
+
+	for child in childrens:
+		if child.is_class(type_to_find.get_class()):
+			result.append(child)
+		else:
+			result.append_array(find_nodes_of_type(child, type_to_find))
+	
+	return result
+
+
+static func free_children(node: Node, except: Array = []) -> void:
+	if node.get_child_count() == 0:
+		return
+
+	var childrens = node.get_children().filter(func(child): return not child.get_class() in except)
+	childrens.reverse()
+	
+	for child in childrens:
+		child.free()
+	
+	except.clear()
+
+
+static func chunk_array(array: Array, size: int):
+	var result = []
+	var i = 0
+	var j = -1
+	
+	for element in array:
+		if i % size == 0:
+			result.push_back([])
+			j += 1
+			
+		result[j].push_back(element)
+		i += 1
+		
+	return result
