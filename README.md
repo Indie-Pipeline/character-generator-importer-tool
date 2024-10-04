@@ -99,6 +99,18 @@ _There is no examples of spritesheet in the repository as it is a paid tool but 
 
 ## Click the "Generate Animations" button
 
+`Individual spritesheet`
+
+![individual_spritesheet](images/individual_spritesheet.png)
+
+![individual_spritesheet_frames](images/spritesheet_animations.png)
+
+---
+
+`Spritesheet folder`
+
+![spritesheet_folder_generation](images/spritesheet_folder_generation.png)
+
 # How to import spritesheet parts
 
 The character generator tool saves all the spritesheet as separated body parts on the path:
@@ -116,3 +128,11 @@ Set in the `CharacterGeneratorImporterTool` the property `output_folder_parts` w
 ![importer_path_folders](images/importer_path_folders.png)
 
 Click the `Generate Animations` button, this could take few seconds even using multiple threads so be patient if the editor freeze up for a moment.
+
+⚠️ If you get an error when generate animations, you may have to restart the editor after importing all the parts ⚠️
+
+![spritesheet_parts_final](images/spritesheet_parts_final.png)
+
+---
+
+![spritesheet_parts_final](images/spritesheet_parts_final_resource.png)

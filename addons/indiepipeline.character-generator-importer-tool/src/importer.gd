@@ -168,7 +168,6 @@ func create_spritesheets_parts_as_resources() -> void:
 func finish_thread(thread: Thread) -> void:
 	if thread.is_alive:
 		thread.wait_to_finish()
-		EditorInterface.get_resource_filesystem().scan()
 		
 
 func create_spritesheets_as_resources(spritesheets: Array = []) -> void:
