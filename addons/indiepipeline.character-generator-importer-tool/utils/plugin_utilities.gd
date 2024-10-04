@@ -28,6 +28,9 @@ static func directory_exist_on_executable_path(directory_path: String) -> Error:
 	
 ## Supports RegEx expressions
 static func get_files_recursive(path: String, regex: RegEx = null) -> Array:
+	if path.is_empty() or not DirAccess.dir_exists_absolute(path):
+		return []
+		
 	var files = []
 	var directory = DirAccess.open(path)
 	

@@ -1042,10 +1042,10 @@ func _character_spritesheets_are_valid() -> bool:
 	
 	if character_spritesheet_folder.is_empty():
 		push_warning("CharacterCreatorToolImporter: The character spritesheet folder is empty, select a folder with the spritesheet files to generate the animations")
-		
+	
 	if character_spritesheet.is_empty() and character_spritesheet_folder.is_empty():
 		return false
-
+	
 	return true
 	
 	

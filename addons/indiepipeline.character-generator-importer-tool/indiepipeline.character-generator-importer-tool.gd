@@ -15,7 +15,7 @@ func _enter_tree() -> void:
 	if not DirAccess.dir_exists_absolute(MyPluginSettings.PluginTemporaryReleaseUpdateDirectoryPath):
 		DirAccess.make_dir_recursive_absolute(MyPluginSettings.PluginTemporaryReleaseUpdateDirectoryPath)
 	
-	add_custom_type(plugin_custom_type, "Node", preload("src/importer.gd"), null)
+	add_custom_type(plugin_custom_type, "Node", preload("src/importer.gd"), preload("assets/character-generator-importer-tool.svg"))
 	
 	inspector_plugin = preload("inspector/inspector_button_plugin.gd").new()
 	add_inspector_plugin(inspector_plugin)
